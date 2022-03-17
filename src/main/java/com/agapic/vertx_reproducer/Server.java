@@ -2,18 +2,13 @@ package com.agapic.vertx_reproducer;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.MultiMap;
-import io.vertx.core.Vertx;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Server extends AbstractVerticle {
     private final Logger logger = LoggerFactory.getLogger(Server.class);
-
-    public static void main(String[] args) {
-        Vertx.vertx().deployVerticle(new Server());
-    }
-
+    
     public void start() {
         // To fix the issue:
         // 1. Pass options into createHttpServer()
@@ -80,6 +75,6 @@ public class Server extends AbstractVerticle {
             } else {
                 ws.reject(responseCode);
             }
-        }).listen(8080);
+        }).listen(8081);
     }
 }
