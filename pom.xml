@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <exec.mainClass>com.agapic.vertx_reproducer.Server</exec.mainClass>
+        <exec.mainClass>com.agapic.vertx_reproducer.Main</exec.mainClass>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
